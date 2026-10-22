@@ -1,1 +1,6 @@
-const nextConfig = {}; export default nextConfig;
+const nextConfig = {
+  async rewrites() {
+    return [{ source: "/:path*", destination: "/" }];
+  },
+};
+export default nextConfig;
