@@ -66,6 +66,7 @@ function Orders({ say }) {
           <div className="flex justify-between"><b className="font-mono text-xo">{o.tracking_number}</b><b>{o.total} ₺</b></div>
           <div className="text-sm">{o.restaurants?.name_ar} · {o.customer_name} · <a className="text-xo" href={"tel:" + o.phone}>{o.phone}</a></div>
           <div className="text-sm opacity-70">{o.address}{o.notes ? " — " + o.notes : ""}</div>
+          {o.lat != null && <a className="text-sm font-bold text-xo" target="_blank" rel="noreferrer" href={`https://www.google.com/maps?q=${o.lat},${o.lng}`}>📍 فتح موقع الزبون على الخريطة</a>}
           <div className="my-1 text-xs opacity-70">{(o.order_items || []).map((i) => `${i.qty}× ${i.name}`).join("، ")}</div>
           <select className={inp} value={o.status} onChange={(e) => upd(o, { status: e.target.value })}>{ST.map((s) => <option key={s[0]} value={s[0]}>{s[1]}</option>)}</select>
           <textarea className={inp} rows={1} placeholder="ملاحظات الإدارة" defaultValue={o.admin_notes || ""} onBlur={(e) => e.target.value !== (o.admin_notes || "") && upd(o, { admin_notes: e.target.value })} />

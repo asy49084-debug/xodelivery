@@ -6,8 +6,8 @@ import Admin from "./Admin";
 
 const STEPS = ["created", "confirmed", "preparing", "picked_up", "on_the_way", "delivered"];
 const T = {
-  ar: { home: "الرئيسية", search: "البحث", favs: "المفضلة", cart: "السلة", account: "حسابي", ph: "ابحث عن مطعم...", cats: "التصنيفات", near: "المطاعم", min: "دقيقة", fee: "توصيل", open: "مفتوح", closed: "مغلق", empty: "لا توجد نتائج", add: "أضف", sub: "المجموع", delivery: "رسوم التوصيل", total: "الإجمالي", name: "الاسم", phone: "رقم الهاتف", address: "العنوان", notes: "ملاحظات", pay: "طريقة الدفع", cod: "💵 الدفع عند الاستلام", place: "تأكيد الطلب", emptyCart: "السلة فاضية", back: "→ رجوع", login: "دخول", register: "إنشاء حساب", email: "البريد الإلكتروني", pass: "كلمة المرور (6 أحرف على الأقل)", full: "الاسم الكامل", logout: "تسجيل خروج", orders: "طلباتي", track: "تتبع طلب", trackNo: "رقم التتبع", go: "تتبع", steps: ["تم إنشاء الطلب", "تم تأكيد الطلب", "المطعم يحضّر الطلب", "السائق استلم الطلب", "الطلب في الطريق", "تم التوصيل"], cancelled: "تم إلغاء الطلب", nf: "لم يتم العثور على الطلب", fill: "عبّي الاسم والهاتف والعنوان", added: "تمت الإضافة ✓", noFav: "ما أضفت مفضلات بعد", hello: "اطلب أكلك المفضل", hsub: "توصيل سريع من XO", closedMsg: "المطعم مغلق حالياً", noMenu: "لا توجد منتجات بعد", mailMsg: "تم إنشاء الحساب. إذا وصلك بريد تأكيد افتحه ثم سجّل دخول." },
-  tr: { home: "Ana Sayfa", search: "Ara", favs: "Favoriler", cart: "Sepet", account: "Hesabım", ph: "Restoran ara...", cats: "Kategoriler", near: "Restoranlar", min: "dk", fee: "Teslimat", open: "Açık", closed: "Kapalı", empty: "Sonuç yok", add: "Ekle", sub: "Ara toplam", delivery: "Teslimat ücreti", total: "Toplam", name: "Ad", phone: "Telefon", address: "Adres", notes: "Notlar", pay: "Ödeme yöntemi", cod: "💵 Kapıda ödeme", place: "Siparişi onayla", emptyCart: "Sepet boş", back: "← Geri", login: "Giriş", register: "Hesap oluştur", email: "E-posta", pass: "Şifre (en az 6 karakter)", full: "Ad soyad", logout: "Çıkış yap", orders: "Siparişlerim", track: "Sipariş takibi", trackNo: "Takip numarası", go: "Takip et", steps: ["Sipariş oluşturuldu", "Sipariş onaylandı", "Restoran hazırlıyor", "Kurye siparişi aldı", "Sipariş yolda", "Teslim edildi"], cancelled: "Sipariş iptal edildi", nf: "Sipariş bulunamadı", fill: "Ad, telefon ve adresi doldurun", added: "Eklendi ✓", noFav: "Henüz favori yok", hello: "Favori yemeğini sipariş et", hsub: "XO ile hızlı teslimat", closedMsg: "Restoran şu an kapalı", noMenu: "Henüz ürün yok", mailMsg: "Hesap oluşturuldu. Onay e-postası geldiyse açın, sonra giriş yapın." },
+  ar: { home: "الرئيسية", search: "البحث", favs: "المفضلة", cart: "السلة", account: "حسابي", ph: "ابحث عن مطعم...", cats: "التصنيفات", near: "المطاعم", min: "دقيقة", fee: "توصيل", open: "مفتوح", closed: "مغلق", empty: "لا توجد نتائج", add: "أضف", sub: "المجموع", delivery: "رسوم التوصيل", total: "الإجمالي", name: "الاسم", phone: "رقم الهاتف", address: "العنوان", notes: "ملاحظات", pay: "طريقة الدفع", cod: "💵 الدفع عند الاستلام", place: "تأكيد الطلب", emptyCart: "السلة فاضية", back: "→ رجوع", login: "دخول", register: "إنشاء حساب", email: "البريد الإلكتروني", pass: "كلمة المرور (6 أحرف على الأقل)", full: "الاسم الكامل", logout: "تسجيل خروج", orders: "طلباتي", track: "تتبع طلب", trackNo: "رقم التتبع", go: "تتبع", steps: ["تم إنشاء الطلب", "تم تأكيد الطلب", "المطعم يحضّر الطلب", "السائق استلم الطلب", "الطلب في الطريق", "تم التوصيل"], cancelled: "تم إلغاء الطلب", nf: "لم يتم العثور على الطلب", fill: "عبّي الاسم والهاتف", added: "تمت الإضافة ✓", noFav: "ما أضفت مفضلات بعد", hello: "اطلب أكلك المفضل", hsub: "توصيل سريع من XO", closedMsg: "المطعم مغلق حالياً", noMenu: "لا توجد منتجات بعد", loc: "📍 حدّد موقعي (GPS)", locOk: "✅ تم تحديد موقعك", locErr: "تعذر تحديد الموقع. فعّل خدمات الموقع للمتصفح ثم أعد المحاولة", locNeed: "حدّد موقعك بالـ GPS أولاً", addrD: "تفاصيل إضافية (المبنى، الطابق، علامة مميزة) - اختياري", mailMsg: "تم إنشاء الحساب. إذا وصلك بريد تأكيد افتحه ثم سجّل دخول." },
+  tr: { home: "Ana Sayfa", search: "Ara", favs: "Favoriler", cart: "Sepet", account: "Hesabım", ph: "Restoran ara...", cats: "Kategoriler", near: "Restoranlar", min: "dk", fee: "Teslimat", open: "Açık", closed: "Kapalı", empty: "Sonuç yok", add: "Ekle", sub: "Ara toplam", delivery: "Teslimat ücreti", total: "Toplam", name: "Ad", phone: "Telefon", address: "Adres", notes: "Notlar", pay: "Ödeme yöntemi", cod: "💵 Kapıda ödeme", place: "Siparişi onayla", emptyCart: "Sepet boş", back: "← Geri", login: "Giriş", register: "Hesap oluştur", email: "E-posta", pass: "Şifre (en az 6 karakter)", full: "Ad soyad", logout: "Çıkış yap", orders: "Siparişlerim", track: "Sipariş takibi", trackNo: "Takip numarası", go: "Takip et", steps: ["Sipariş oluşturuldu", "Sipariş onaylandı", "Restoran hazırlıyor", "Kurye siparişi aldı", "Sipariş yolda", "Teslim edildi"], cancelled: "Sipariş iptal edildi", nf: "Sipariş bulunamadı", fill: "Ad ve telefonu doldurun", added: "Eklendi ✓", noFav: "Henüz favori yok", hello: "Favori yemeğini sipariş et", hsub: "XO ile hızlı teslimat", closedMsg: "Restoran şu an kapalı", noMenu: "Henüz ürün yok", loc: "📍 Konumumu belirle (GPS)", locOk: "✅ Konumunuz belirlendi", locErr: "Konum alınamadı. Tarayıcıda konum servislerini açıp tekrar deneyin", locNeed: "Önce GPS ile konumunuzu belirleyin", addrD: "Ek bilgi (bina, kat, tarif) - isteğe bağlı", mailMsg: "Hesap oluşturuldu. Onay e-postası geldiyse açın, sonra giriş yapın." },
 };
 const money = (n) => `${Number(n) % 1 ? Number(n).toFixed(2) : Number(n)} ₺`;
 const inp = "mb-2 w-full rounded-xl border bg-[var(--card)] p-3";
@@ -104,15 +104,24 @@ function Rest({ c, id }) {
 
 function CartView({ c }) {
   const t = c.t;
-  const [f, setF] = useState({ name: "", phone: "", address: "", notes: "" });
+  const [f, setF] = useState({ name: "", phone: "", address: "", notes: "", lat: null, lng: null });
   const [busy, setBusy] = useState(false);
   useEffect(() => { try { setF((x) => ({ ...x, ...JSON.parse(localStorage.getItem("xo_info") || "{}") })); } catch {} }, []);
   const sub = c.cart.items.reduce((s, i) => s + i.price * i.q, 0);
   if (!c.cart.items.length) return <p className="mt-16 text-center text-5xl">🛒<br /><span className="text-base opacity-70">{t.emptyCart}</span></p>;
+  const getLoc = () => {
+    if (!navigator.geolocation) { c.toast(t.locErr); return; }
+    navigator.geolocation.getCurrentPosition(
+      (p) => setF((x) => ({ ...x, lat: p.coords.latitude, lng: p.coords.longitude })),
+      () => c.toast(t.locErr),
+      { enableHighAccuracy: true, timeout: 15000 }
+    );
+  };
   async function place() {
-    if (!f.name.trim() || !f.phone.trim() || !f.address.trim()) { c.toast(t.fill); return; }
+    if (!f.name.trim() || !f.phone.trim()) { c.toast(t.fill); return; }
+    if (f.lat == null) { c.toast(t.locNeed); return; }
     setBusy(true);
-    const { data, error } = await supabase.rpc("create_order", { p_restaurant: c.cart.rid, p_items: c.cart.items.map((i) => ({ id: i.id, q: i.q })), p_name: f.name, p_phone: f.phone, p_address: f.address, p_notes: f.notes || null });
+    const { data, error } = await supabase.rpc("create_order", { p_restaurant: c.cart.rid, p_items: c.cart.items.map((i) => ({ id: i.id, q: i.q })), p_name: f.name, p_phone: f.phone, p_address: f.address || "", p_lat: f.lat, p_lng: f.lng, p_notes: f.notes || null });
     setBusy(false);
     if (error) { c.toast(error.message); return; }
     localStorage.setItem("xo_info", JSON.stringify({ name: f.name, phone: f.phone, address: f.address }));
@@ -135,7 +144,8 @@ function CartView({ c }) {
       </div>
       <input className={inp} placeholder={t.name} value={f.name} onChange={(e) => setF({ ...f, name: e.target.value })} />
       <input className={inp} placeholder={t.phone} type="tel" value={f.phone} onChange={(e) => setF({ ...f, phone: e.target.value })} />
-      <input className={inp} placeholder={t.address} value={f.address} onChange={(e) => setF({ ...f, address: e.target.value })} />
+      <button type="button" onClick={getLoc} className={"mb-2 w-full rounded-xl border-2 p-3 font-bold " + (f.lat != null ? "border-green-600 text-green-600" : "border-xo text-xo")}>{f.lat != null ? t.locOk : t.loc}</button>
+      <input className={inp} placeholder={t.addrD} value={f.address} onChange={(e) => setF({ ...f, address: e.target.value })} />
       <textarea className={inp} rows={2} placeholder={t.notes} value={f.notes} onChange={(e) => setF({ ...f, notes: e.target.value })} />
       <div className="mb-3 rounded-xl border border-xo p-3">{t.pay}: {t.cod}</div>
       <button className={btn} disabled={busy} onClick={place}>{t.place}</button>
